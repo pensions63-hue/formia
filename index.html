@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Costo de una parada y mantenimiento preventivo | fongril</title>
+<meta name="description" content="Guía informativa para dueños de negocios pequeños: cómo estimar el costo de que un equipo se detenga y cuándo conviene el mantenimiento preventivo.">
+<link rel="canonical" href="https://fongril.blog/">
+<link rel="icon" href="data:,">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="fongril">
+<meta property="og:locale" content="es_GT">
+<meta property="og:title" content="Costo de una parada: cuándo conviene el mantenimiento preventivo">
+<meta property="og:description" content="Método por preguntas para estimar lo que cuesta un equipo detenido y compararlo con el costo de mantenerlo. Ejemplos hipotéticos en base 100.">
+<meta property="og:url" content="https://fongril.blog/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@600;700;800&amp;family=Red+Hat+Text:wght@400;600;700&amp;display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://fongril.blog/#sitio",
+      "url": "https://fongril.blog/",
+      "name": "fongril",
+      "inLanguage": "es",
+      "publisher": { "@id": "https://fongril.blog/#organizacion" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://fongril.blog/#titular",
+      "name": "ANDRES EDUARDO VERGARA CAMARGO",
+      "email": "mailto:soporte@fongril.blog",
+      "telephone": "+50234284181",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "La Terminal",
+        "addressLocality": "Ciudad de Guatemala",
+        "postalCode": "01004",
+        "addressCountry": "GT"
+      }
+    },
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://fongril.blog/#organizacion",
+      "name": "fongril",
+      "url": "https://fongril.blog/",
+      "email": "soporte@fongril.blog",
+      "telephone": "+50234284181",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "La Terminal",
+        "addressLocality": "Ciudad de Guatemala",
+        "postalCode": "01004",
+        "addressCountry": "GT"
+      },
+      "founder": { "@id": "https://fongril.blog/#titular" }
+    },
+    {
+      "@type": "Article",
+      "@id": "https://fongril.blog/#articulo",
+      "headline": "Costo de una parada: guía por preguntas para decidir cuándo conviene el mantenimiento preventivo",
+      "datePublished": "2026-09-20",
+      "dateModified": "2026-09-20",
+      "inLanguage": "es",
+      "author": { "@id": "https://fongril.blog/#titular" },
+      "publisher": { "@id": "https://fongril.blog/#organizacion" },
+      "isPartOf": { "@id": "https://fongril.blog/#sitio" },
+      "mainEntityOfPage": "https://fongril.blog/#articulo"
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --manila:#EFE6D2;
+  --superficie:#FBF8F1;
+  --tinta:#1D2733;
+  --tinta-media:#56606B;
+  --filete:#D9CDB3;
+  --azul:#245C7A;
+  --verde:#3E7D4F;
+  --rojo:#B23A2A;
+  --f-titular:"Red Hat Display","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --f-texto:"Red Hat Text","Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --radio:2px;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none !important}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:6rem}
+body{margin:0;background:var(--manila);color:var(--tinta);font-family:var(--f-texto);font-size:1.0625rem;line-height:1.65;font-kerning:normal}
+h1,h2,h3,h4{font-family:var(--f-titular);line-height:1.2;margin:0;text-wrap:balance}
+h1{font-size:clamp(2rem,1.25rem + 3vw,3.25rem);font-weight:800;line-height:1.06;letter-spacing:-.015em;max-width:18ch}
+h2{font-size:clamp(1.5rem,1.25rem + 1vw,1.95rem);font-weight:700;letter-spacing:-.01em}
+h3{font-size:1.25rem;font-weight:700}
+h4{font-size:1.0625rem;font-weight:700}
+p,ul,ol,dl,figure,table{margin:0}
+a{color:var(--tinta);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.18em;transition:color 150ms ease}
+a:hover,a:active,a:focus-visible{color:var(--azul)}
+:focus-visible{outline:3px solid var(--azul);outline-offset:2px}
+strong{font-weight:700}
+.salto{position:absolute;left:.75rem;top:-5rem;z-index:50;padding:.6rem 1rem;background:var(--superficie);border:2px solid var(--azul);border-radius:var(--radio);font-weight:700;transition:top 150ms ease}
+.salto:focus{top:.75rem}
+.cabecera{position:sticky;top:0;z-index:30;background:var(--superficie);border-top:4px solid var(--azul);border-bottom:1px solid var(--filete)}
+.cabecera-interior{width:min(100% - 1.5rem,60rem);margin-inline:auto;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 1.5rem;padding-block:.6rem}
+.marca{display:flex;flex-direction:column;text-decoration:none}
+.marca-nombre{font-family:var(--f-titular);font-weight:800;font-size:1.5rem;line-height:1.1;letter-spacing:-.02em}
+.marca-lema{font-size:.8125rem;line-height:1.3;color:var(--tinta-media)}
+.menu-boton{display:none;align-items:center;min-height:2.75rem;padding:.5rem .9rem;font:700 1rem/1 var(--f-titular);color:var(--tinta);background:var(--superficie);border:1px solid var(--tinta);border-radius:var(--radio);cursor:pointer;transition:background-color 150ms ease}
+.menu-boton:hover,.menu-boton:focus-visible{background:var(--manila)}
+.menu-lista{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:.1rem 1.35rem}
+.menu-lista a{display:block;padding:.4rem 0;font-family:var(--f-titular);font-weight:700;text-decoration:none;border-bottom:2px solid transparent;transition:color 150ms ease,border-color 150ms ease}
+.menu-lista a:hover,.menu-lista a:active,.menu-lista a:focus-visible{border-bottom-color:var(--azul)}
+main{display:block;padding-block:1.5rem 3.5rem}
+.pliego{margin-inline:auto;background:var(--superficie);border-inline:1px solid var(--filete);border-bottom:1px solid var(--filete);padding-inline:clamp(1rem,4.5vw,2.5rem)}
+.caratula{width:min(100% - 1.5rem,60rem);padding-bottom:2.5rem;display:grid;gap:2.25rem}
+.lectura{width:min(100% - 1.5rem,64ch + 5rem);margin-top:1.5rem;padding-bottom:3rem}
+.seccion{border-top:2px solid var(--azul);padding-top:2.25rem}
+.lectura > .seccion + .seccion{margin-top:3.25rem}
+.pila > * + *{margin-top:1.15rem}
+.pila > h3{padding-top:1.1rem}
+.pila > h4{padding-top:.6rem}
+.cabeza{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1rem}
+.etiqueta{position:relative;display:inline-block;padding:.3rem .8rem .3rem 1.75rem;background:var(--manila);border:1px solid var(--filete);border-radius:var(--radio);font-family:var(--f-titular);font-weight:700;font-size:.8125rem;line-height:1.3}
+.etiqueta::before{content:"";position:absolute;left:.6rem;top:50%;width:.55rem;height:.55rem;transform:translateY(-50%);border-radius:50%;background:var(--superficie);border:1px solid var(--tinta-media)}
+.entradilla{font-size:1.1875rem;line-height:1.55;max-width:58ch}
+.aviso-informativo{padding:.8rem 1rem;border:1px solid var(--tinta-media);border-radius:var(--radio);font-size:.9375rem;max-width:58ch}
+.motivo{padding-top:1.25rem;border-top:1px solid var(--filete)}
+.motivo figcaption{margin-top:.75rem;font-size:.875rem;line-height:1.5;color:var(--tinta-media)}
+.grafico{display:block;width:100%;height:auto}
+.grafico--reducido{max-width:22rem}
+.m-rejilla line{stroke:var(--filete);stroke-width:1}
+.m-eje{fill:none;stroke:var(--tinta);stroke-width:1.5}
+.m-flecha{fill:var(--tinta)}
+.m-curva{fill:none;stroke:var(--tinta);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
+.m-vida{fill:var(--verde)}
+.m-falla{fill:var(--rojo)}
+.m-preventivo{stroke:var(--tinta);stroke-width:2;stroke-dasharray:7 6}
+.m-texto{fill:var(--tinta);font-family:var(--f-texto);font-weight:600}
+.m-eje-texto{fill:var(--tinta-media);font-family:var(--f-texto)}
+.alcance{border:1px solid var(--filete);border-top:3px solid var(--azul);border-radius:var(--radio);padding:1.25rem 1.25rem 1.4rem}
+.alcance h2{font-size:1.3rem}
+.alcance h3{font-size:1rem}
+.lista-alcance{padding-left:1.15rem;font-size:.9375rem;line-height:1.5}
+.lista-alcance li + li{margin-top:.45rem}
+.lista-alcance li::marker{color:var(--tinta-media)}
+.mapa-lista{padding-left:1.5rem}
+.mapa-lista > li + li{margin-top:.55rem}
+.mapa-lista li::marker{font-family:var(--f-titular);font-weight:700;color:var(--tinta-media)}
+.mapa-sublista{padding-left:1.4rem;margin-top:.35rem;font-size:.9375rem}
+.mapa-sublista li + li{margin-top:.25rem}
+.glosario{display:grid;grid-template-columns:minmax(0,1fr);border-top:1px solid var(--filete)}
+.glosario dt{font-family:var(--f-titular);font-weight:700;padding-top:.9rem}
+.glosario dd{margin:0;padding-block:.3rem .9rem;border-bottom:1px solid var(--filete)}
+.fechas{font-size:.875rem;color:var(--tinta-media)}
+.apartado{border-top:1px solid var(--filete);padding-top:1.75rem}
+.apartado > * + *{margin-top:1rem}
+.lectura .apartado{margin-top:2.25rem}
+.advertencia,.antiphishing{padding:.9rem 1rem;border:1px solid var(--tinta);border-radius:var(--radio);font-size:.9375rem;line-height:1.55}
+.verificacion{list-style:none;padding:0;border-top:1px solid var(--filete)}
+.verificacion li{position:relative;padding:.55rem 0 .55rem 2rem;border-bottom:1px solid var(--filete)}
+.verificacion li::before{content:"";position:absolute;left:.1rem;top:.9rem;width:1rem;height:1rem;border:1.5px solid var(--tinta);border-radius:var(--radio)}
+.tabla-marco{overflow-x:auto;border:1px solid var(--filete);border-radius:var(--radio)}
+table{width:100%;min-width:36rem;border-collapse:collapse;font-size:.9375rem;line-height:1.45;font-variant-numeric:tabular-nums}
+caption{caption-side:top;text-align:left;padding:.75rem .9rem;font-size:.875rem;color:var(--tinta-media);border-bottom:1px solid var(--filete)}
+th,td{padding:.6rem .9rem;vertical-align:top}
+th:not(.num){text-align:left}
+thead th{font-family:var(--f-titular);font-weight:700;border-bottom:2px solid var(--tinta)}
+tbody th{font-weight:600}
+tbody tr + tr > *{border-top:1px solid var(--filete)}
+.num{text-align:right;white-space:nowrap}
+.marca-falla{display:inline-flex;align-items:center;gap:.35rem;margin-right:.55rem;font-size:.8125rem;font-weight:700}
+.marca-falla::before{content:"";width:.7rem;height:.7rem;background:var(--rojo);border-radius:var(--radio)}
+.limites-lista,.pasos{padding-left:1.4rem}
+.limites-lista li + li,.pasos li + li{margin-top:.6rem}
+.pasos li::marker{font-family:var(--f-titular);font-weight:700}
+.caso-cierre{border:1px solid var(--filete);border-radius:var(--radio);padding:1rem 1.1rem}
+.caso-cierre p + p{margin-top:.7rem}
+.ficha{border:1px solid var(--filete);border-radius:var(--radio)}
+.ficha > div{padding:.6rem .9rem}
+.ficha > div + div{border-top:1px solid var(--filete)}
+.ficha dt{font-size:.8125rem;color:var(--tinta-media)}
+.ficha dd{margin:0;font-weight:600;overflow-wrap:anywhere}
+.datos-contacto{list-style:none;padding:0;border-top:1px solid var(--filete)}
+.datos-contacto li{padding:.45rem 0;border-bottom:1px solid var(--filete);overflow-wrap:anywhere}
+.formulario{display:grid;gap:1.1rem;padding:1.25rem;border:1px solid var(--filete);border-radius:var(--radio)}
+.campo{display:grid;gap:.35rem}
+.campo label{font-family:var(--f-titular);font-weight:700}
+.campo input,.campo textarea{width:100%;padding:.6rem .7rem;font:inherit;color:var(--tinta);background:var(--superficie);border:1px solid var(--tinta-media);border-radius:var(--radio);transition:border-color 150ms ease}
+.campo input:hover,.campo textarea:hover,.campo input:focus-visible,.campo textarea:focus-visible{border-color:var(--tinta)}
+.campo textarea{min-height:9rem;resize:vertical}
+.campo [aria-invalid="true"]{border-width:2px;border-color:var(--tinta)}
+.error{font-size:.875rem;font-weight:700}
+.estado{font-size:.9375rem}
+.boton{display:inline-flex;align-items:center;justify-content:center;min-height:2.75rem;padding:.6rem 1.15rem;font:700 1rem/1.2 var(--f-titular);border:1px solid;border-radius:var(--radio);cursor:pointer;transition:background-color 150ms ease,border-color 150ms ease}
+.boton--primario{color:var(--superficie);background:var(--azul);border-color:var(--azul)}
+.boton--primario:hover,.boton--primario:focus-visible{background:var(--tinta);border-color:var(--tinta)}
+.boton--secundario{color:var(--tinta);background:var(--superficie);border-color:var(--tinta)}
+.boton--secundario:hover,.boton--secundario:focus-visible{background:var(--manila)}
+.legales{border-bottom:1px solid var(--filete)}
+.doc{border-top:1px solid var(--filete)}
+.doc summary{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem .25rem;cursor:pointer;list-style:none;transition:color 150ms ease}
+.doc summary::-webkit-details-marker{display:none}
+.doc summary::after{content:"+";font:700 1.5rem/1 var(--f-titular)}
+.doc[open] summary::after{content:"\2212"}
+.doc summary:hover,.doc summary:focus-visible{color:var(--azul)}
+.doc summary h3{font-size:1.125rem}
+.doc-cuerpo{padding:0 .25rem 1.75rem}
+details.doc::details-content{opacity:0;transition:opacity 200ms ease-out,content-visibility 200ms allow-discrete}
+details.doc[open]::details-content{opacity:1}
+.actualizacion{font-size:.875rem;color:var(--tinta-media)}
+.pie{background:var(--azul);color:var(--superficie);padding-block:2.5rem 3rem}
+.pie-interior{width:min(100% - 1.5rem,60rem);margin-inline:auto;display:grid;gap:2rem}
+.pie h2{font-size:1.125rem}
+.pie a{color:var(--superficie)}
+.pie a:hover,.pie a:focus-visible{color:var(--manila)}
+.pie :focus-visible{outline-color:var(--superficie)}
+.pie-datos > div{padding-block:.45rem;border-top:1px solid var(--filete)}
+.pie-datos dt{font-size:.8125rem;color:var(--manila)}
+.pie-datos dd{margin:0;overflow-wrap:anywhere}
+.pie-legales{list-style:none;padding:0}
+.pie-legales li + li{margin-top:.5rem}
+.pie-nota{font-size:.875rem;color:var(--manila);border-top:1px solid var(--filete);padding-top:1rem}
+.cookies{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--superficie);border-top:3px solid var(--azul);opacity:0;transform:translateY(1rem);transition:opacity 200ms ease-out,transform 200ms ease-out}
+.cookies.visible{opacity:1;transform:none}
+.cookies-interior{width:min(100% - 1.5rem,60rem);margin-inline:auto;padding-block:1rem;display:flex;flex-wrap:wrap;align-items:center;gap:.9rem 1.5rem}
+.cookies-texto{flex:1 1 22rem;font-size:.9375rem;line-height:1.5}
+.cookies-botones{display:flex;flex-wrap:wrap;gap:.75rem}
+@media (max-width:47.99rem){
+  .js .menu-boton{display:inline-flex}
+  .js .menu{display:none;flex-basis:100%}
+  .js .menu.abierta{display:block}
+  .js .menu-lista{flex-direction:column;padding-bottom:.4rem}
+  .marca-lema{display:none}
+}
+@media (min-width:40rem){
+  .glosario{grid-template-columns:11rem minmax(0,1fr);column-gap:1.5rem}
+  .glosario dd{padding-top:.9rem}
+  .glosario dt{padding-bottom:.9rem;border-bottom:1px solid var(--filete)}
+  .ficha > div{display:grid;grid-template-columns:12rem minmax(0,1fr);gap:1rem}
+}
+@media (min-width:48rem){
+  .pie-interior{grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+  .pie-nota{grid-column:1 / -1}
+}
+@media (min-width:62rem){
+  .caratula{grid-template-columns:minmax(0,1fr) 17rem;gap:2.5rem;align-items:start}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after,details.doc::details-content{transition:none !important}
+}
+</style>
+<script>
+(function () {
+  "use strict";
+
+  var CLAVE_COOKIES = "fongril-cookies";
+  document.documentElement.classList.add("js");
+
+  function leerPreferencia() {
+    try {
+      return window.localStorage.getItem(CLAVE_COOKIES);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function guardarPreferencia(valor) {
+    try {
+      window.localStorage.setItem(CLAVE_COOKIES, valor);
+      return true;
+    } catch (error) {
+      return false;
+    }
+  }
+
+  function abrirDocumento(id) {
+    if (!id) {
+      return;
+    }
+    var destino = document.getElementById(id);
+    if (destino && destino.tagName === "DETAILS") {
+      destino.open = true;
+    }
+  }
+
+  function abrirDesdeHash() {
+    var id = window.location.hash.slice(1);
+    try {
+      abrirDocumento(decodeURIComponent(id));
+    } catch (error) {
+      abrirDocumento("");
+    }
+  }
+
+  function iniciarMenu() {
+    var boton = document.getElementById("menu-boton");
+    var menu = document.getElementById("menu");
+    if (!boton || !menu) {
+      return;
+    }
+    function cerrar() {
+      menu.classList.remove("abierta");
+      boton.setAttribute("aria-expanded", "false");
+    }
+    boton.addEventListener("click", function () {
+      var abierto = menu.classList.toggle("abierta");
+      boton.setAttribute("aria-expanded", abierto ? "true" : "false");
+    });
+    menu.addEventListener("click", function (evento) {
+      if (evento.target.closest("a")) {
+        cerrar();
+      }
+    });
+    document.addEventListener("keydown", function (evento) {
+      if (evento.key === "Escape" && menu.classList.contains("abierta")) {
+        cerrar();
+        boton.focus();
+      }
+    });
+  }
+
+  function iniciarDocumentos() {
+    abrirDesdeHash();
+    window.addEventListener("hashchange", abrirDesdeHash);
+    document.addEventListener("click", function (evento) {
+      var enlace = evento.target.closest("a[href^='#']");
+      if (enlace) {
+        abrirDocumento(enlace.getAttribute("href").slice(1));
+      }
+    });
+  }
+
+  function iniciarCookies() {
+    var aviso = document.getElementById("aviso-cookies");
+    var aceptar = document.getElementById("cookies-aceptar");
+    var rechazar = document.getElementById("cookies-rechazar");
+    var cambiar = document.getElementById("cambiar-cookies");
+    var temporizador = 0;
+    if (!aviso || !aceptar || !rechazar) {
+      return;
+    }
+    function mostrar() {
+      window.clearTimeout(temporizador);
+      aviso.hidden = false;
+      aviso.getBoundingClientRect();
+      aviso.classList.add("visible");
+    }
+    function elegir(valor) {
+      guardarPreferencia(valor);
+      aviso.classList.remove("visible");
+      temporizador = window.setTimeout(function () {
+        aviso.hidden = true;
+      }, 200);
+    }
+    aceptar.addEventListener("click", function () {
+      elegir("aceptadas");
+    });
+    rechazar.addEventListener("click", function () {
+      elegir("rechazadas");
+    });
+    if (cambiar) {
+      cambiar.hidden = false;
+      cambiar.addEventListener("click", function () {
+        mostrar();
+        aceptar.focus();
+      });
+    }
+    if (!leerPreferencia()) {
+      mostrar();
+    }
+  }
+
+  function iniciarFormulario() {
+    var formulario = document.getElementById("formulario-contacto");
+    var estado = document.getElementById("formulario-estado");
+    if (!formulario || !estado) {
+      return;
+    }
+    var nombre = document.getElementById("campo-nombre");
+    var correo = document.getElementById("campo-correo");
+    var mensaje = document.getElementById("campo-mensaje");
+    if (!nombre || !correo || !mensaje) {
+      return;
+    }
+    var reglas = [
+      { campo: nombre, error: "error-nombre", texto: "Escriba su nombre, con al menos 2 caracteres.", valido: function (v) { return v.length >= 2; } },
+      { campo: correo, error: "error-correo", texto: "Escriba un correo válido, por ejemplo nombre@dominio.com.", valido: function (v) { return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v); } },
+      { campo: mensaje, error: "error-mensaje", texto: "Escriba un mensaje de al menos 20 caracteres.", valido: function (v) { return v.length >= 20; } }
+    ];
+    formulario.noValidate = true;
+    formulario.addEventListener("submit", function (evento) {
+      evento.preventDefault();
+      var primerError = null;
+      reglas.forEach(function (regla) {
+        var correcto = regla.valido(regla.campo.value.trim());
+        var aviso = document.getElementById(regla.error);
+        regla.campo.setAttribute("aria-invalid", correcto ? "false" : "true");
+        if (aviso) {
+          aviso.textContent = correcto ? "" : regla.texto;
+          aviso.hidden = correcto;
+        }
+        if (!correcto && !primerError) {
+          primerError = regla.campo;
+        }
+      });
+      if (primerError) {
+        estado.textContent = "Revise los campos señalados antes de continuar.";
+        primerError.focus();
+        return;
+      }
+      var cuerpo = "Nombre: " + nombre.value.trim() + "\n" + "Correo: " + correo.value.trim() + "\n\n" + mensaje.value.trim();
+      estado.textContent = "Se abrirá su programa de correo con el mensaje preparado. Si no se abre, escriba a soporte@fongril.blog.";
+      window.location.href = "mailto:soporte@fongril.blog?subject=" + encodeURIComponent("Consulta desde fongril.blog") + "&body=" + encodeURIComponent(cuerpo);
+    });
+  }
+
+  function iniciar() {
+    iniciarMenu();
+    iniciarDocumentos();
+    iniciarCookies();
+    iniciarFormulario();
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", iniciar);
+  } else {
+    iniciar();
+  }
+}());
+</script>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+
+<header class="cabecera">
+  <div class="cabecera-interior">
+    <a class="marca" href="#inicio">
+      <span class="marca-nombre">fongril</span>
+      <span class="marca-lema">Expediente de mantenimiento para negocios pequeños</span>
+    </a>
+    <button class="menu-boton" id="menu-boton" type="button" aria-expanded="false" aria-controls="menu">Menú</button>
+    <nav class="menu" id="menu" aria-label="Menú principal">
+      <ul class="menu-lista">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#articulo">Artículos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#politicas">Políticas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <section class="pliego caratula seccion" id="inicio" aria-labelledby="titulo-portada">
+    <div class="pila">
+      <div class="cabeza">
+        <p class="etiqueta">Portada</p>
+      </div>
+      <h1 id="titulo-portada">¿Cuánto le cuesta a su negocio que un equipo se detenga?</h1>
+      <p class="entradilla">Muchos negocios pequeños atienden sus equipos solo cuando fallan y nunca calculan lo que representa cada parada. Esta guía explica, con ejemplos hipotéticos en base 100, cómo inventariar los equipos, registrar sus fallas, armar un calendario preventivo y comparar el costo de mantener con el costo de dejar de operar.</p>
+      <p class="aviso-informativo"><strong>Portal solo informativo.</strong> fongril explica un método de registro y comparación. No repara equipos, no recomienda técnicos ni proveedores, no vende repuestos ni servicios y no presta asesoría individual.</p>
+      <figure class="motivo">
+        <svg class="grafico" viewBox="0 0 560 330" role="img" aria-labelledby="curva-titulo curva-desc">
+          <title id="curva-titulo">Curva de la bañera de un equipo</title>
+          <desc id="curva-desc">Gráfico de la tasa de fallas de un equipo a lo largo de su tiempo de uso. La tasa es alta en la zona de fallas tempranas, baja y estable en la zona de vida útil y creciente en la zona de desgaste. Una línea discontinua situada dentro de la vida útil, antes del desgaste, marca el mantenimiento preventivo.</desc>
+          <g class="m-rejilla">
+            <line x1="56" y1="90" x2="540" y2="90"/>
+            <line x1="56" y1="130" x2="540" y2="130"/>
+            <line x1="56" y1="170" x2="540" y2="170"/>
+            <line x1="180" y1="30" x2="180" y2="230"/>
+            <line x1="400" y1="30" x2="400" y2="230"/>
+          </g>
+          <rect class="m-falla" x="56" y="238" width="124" height="12"/>
+          <rect class="m-vida" x="180" y="238" width="220" height="12"/>
+          <rect class="m-falla" x="400" y="238" width="140" height="12"/>
+          <path class="m-eje" d="M56 24 V230 H546"/>
+          <path class="m-flecha" d="M51 32 L56 22 L61 32 Z M538 225 L548 230 L538 235 Z"/>
+          <path class="m-curva" d="M62 40 C 90 150 122 197 180 200 L 400 200 C 452 200 502 168 534 50"/>
+          <line class="m-preventivo" x1="372" y1="40" x2="372" y2="230"/>
+          <text class="m-texto" x="364" y="54" text-anchor="end" font-size="18">Mantenimiento</text>
+          <text class="m-texto" x="364" y="74" text-anchor="end" font-size="18">preventivo</text>
+          <text class="m-texto" x="118" y="274" text-anchor="middle" font-size="18">Fallas</text>
+          <text class="m-texto" x="118" y="294" text-anchor="middle" font-size="18">tempranas</text>
+          <text class="m-texto" x="290" y="274" text-anchor="middle" font-size="18">Vida útil</text>
+          <text class="m-texto" x="470" y="274" text-anchor="middle" font-size="18">Desgaste</text>
+          <text class="m-eje-texto" x="540" y="320" text-anchor="end" font-size="16">Tiempo de uso del equipo</text>
+          <text class="m-eje-texto" transform="translate(28 130) rotate(-90)" text-anchor="middle" font-size="16">Tasa de fallas</text>
+        </svg>
+        <figcaption>Curva de la bañera. La tasa de fallas de un equipo suele ser alta al comienzo, baja y estable durante la vida útil (franja verde) y creciente en la etapa de desgaste; las dos franjas rojas señalan las zonas de falla. La línea discontinua marca dónde se sitúa el mantenimiento preventivo: antes de que empiece el desgaste. Esquema ilustrativo, sin escala.</figcaption>
+      </figure>
+    </div>
+
+    <aside class="alcance pila" aria-labelledby="alcance-titulo">
+      <h2 id="alcance-titulo">Alcance de esta guía</h2>
+      <h3>Lo que cubre</h3>
+      <ul class="lista-alcance">
+        <li>Cómo levantar un inventario de equipos con su vida útil estimada.</li>
+        <li>Cómo armar un calendario de mantenimiento preventivo.</li>
+        <li>Cómo comparar el costo de mantener con el costo de una parada.</li>
+        <li>Cómo llevar el historial de fallas de cada equipo.</li>
+      </ul>
+      <h3>Lo que no cubre</h3>
+      <ul class="lista-alcance">
+        <li>Asesoría individual sobre su negocio o sus equipos.</li>
+        <li>Reparaciones, instrucciones técnicas o intervenciones sobre equipos.</li>
+        <li>Venta de repuestos, equipos o servicios técnicos.</li>
+        <li>Créditos, financiamiento o cualquier producto financiero.</li>
+        <li>Solicitudes de datos bancarios, claves o pagos, bajo ningún concepto.</li>
+      </ul>
+    </aside>
+  </section>
+
+  <div class="pliego lectura">
+
+    <nav class="seccion pila" id="mapa" aria-labelledby="mapa-titulo">
+      <div class="cabeza">
+        <p class="etiqueta">Mapa</p>
+        <h2 id="mapa-titulo">Cómo está organizada esta guía</h2>
+      </div>
+      <ol class="mapa-lista">
+        <li><a href="#glosario">Glosario de ocho términos</a></li>
+        <li><a href="#articulo">Artículo: costo de una parada</a>
+          <ol class="mapa-sublista">
+            <li><a href="#p1">¿Qué cuesta realmente una parada?</a></li>
+            <li><a href="#p2">¿Qué equipos conviene registrar primero?</a></li>
+            <li><a href="#p3">¿Qué datos debe tener la ficha de cada equipo?</a></li>
+            <li><a href="#p4">¿Cómo se arma un calendario preventivo?</a></li>
+            <li><a href="#p5">¿Cómo se compara el costo de mantener con el de una parada?</a></li>
+            <li><a href="#p6">¿Cuándo conviene programar el mantenimiento preventivo?</a></li>
+            <li><a href="#limitaciones">Limitaciones del método</a></li>
+          </ol>
+        </li>
+        <li><a href="#casos">Casos resueltos</a>
+          <ol class="mapa-sublista">
+            <li><a href="#caso-1">Un comercio con un equipo de refrigeración</a></li>
+            <li><a href="#caso-2">Un taller con una máquina de trabajo principal</a></li>
+          </ol>
+        </li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#descargo">Descargo de responsabilidad</a></li>
+        <li><a href="#politicas">Documentos legales</a></li>
+      </ol>
+    </nav>
+
+    <section class="seccion pila" id="glosario" aria-labelledby="glosario-titulo">
+      <div class="cabeza">
+        <p class="etiqueta">Glosario</p>
+        <h2 id="glosario-titulo">Ocho términos para leer la guía</h2>
+      </div>
+      <p>Estas definiciones fijan el sentido con que cada término se usa en el artículo y en los casos resueltos.</p>
+      <dl class="glosario">
+        <dt>Vida útil</dt>
+        <dd>Período durante el cual se espera que un equipo funcione con una tasa de fallas baja y estable. Es una estimación, no una fecha exacta: depende del uso, del entorno y de las indicaciones del fabricante. En la ficha se anota en años o en horas de uso.</dd>
+        <dt>Parada</dt>
+        <dd>Período en que un equipo no puede cumplir su función, sea por una falla, por la espera de un repuesto o por una revisión programada. Se mide en días u horas, desde que el equipo deja de operar hasta que vuelve a trabajar en condiciones normales.</dd>
+        <dt>Mantenimiento preventivo</dt>
+        <dd>Conjunto de revisiones que un técnico autorizado realiza según un calendario fijado de antemano, antes de que aparezca una falla. Busca detectar señales de desgaste con tiempo suficiente para planificar la intervención, en lugar de descubrir el problema cuando el equipo ya se detuvo.</dd>
+        <dt>Mantenimiento correctivo</dt>
+        <dd>Intervención que se realiza después de que un equipo falla, para que vuelva a funcionar. No se programa: ocurre cuando ocurre la falla, a menudo en el peor momento, y al costo de la reparación suele sumar el de la parada y el de las compras de última hora.</dd>
+        <dt>Historial de fallas</dt>
+        <dd>Registro ordenado de cada falla de un equipo: fecha, síntoma observado, días de parada, quién intervino y qué costo tuvo. Con varios meses de datos permite ver si las fallas se repiten, si se acercan entre sí o si se concentran en una época del año.</dd>
+        <dt>Tiempo entre fallas</dt>
+        <dd>Cantidad de días que transcurren, en promedio, entre una falla y la siguiente de un mismo equipo. Se calcula a partir del historial de fallas. Cuando ese tiempo se acorta de forma sostenida, suele indicar que el equipo se acerca a la etapa de desgaste.</dd>
+        <dt>Costo de oportunidad</dt>
+        <dd>Lo que el negocio deja de ganar mientras un equipo está detenido: ventas que no se concretan, trabajos que se entregan tarde, clientes que no vuelven. No figura en ninguna factura; por eso suele quedar fuera cuando se compara el costo de mantener con el de reparar.</dd>
+        <dt>Ficha de equipo</dt>
+        <dd>Hoja, en papel o digital, que reúne los datos de un equipo: identificación interna, fecha de compra, ubicación, uso diario, vida útil estimada, calendario preventivo, técnico que lo atiende e historial de fallas. Es la unidad básica del método que propone esta guía.</dd>
+      </dl>
+    </section>
+
+    <!-- Unidad publicitaria: este es un punto válido para insertar un bloque de anuncio, entre dos secciones completas (glosario y artículo). No insertar anuncios dentro del glosario, de los casos resueltos ni de los documentos legales. -->
+
+    <article class="seccion" id="articulo" aria-labelledby="articulo-titulo">
+      <header class="pila">
+        <div class="cabeza">
+          <p class="etiqueta">Artículo</p>
+          <h2 id="articulo-titulo">Costo de una parada: guía por preguntas para decidir cuándo conviene el mantenimiento preventivo</h2>
+        </div>
+        <p class="fechas">Publicado el <time datetime="2026-09-20">20 de septiembre de 2026</time>. Última revisión: <time datetime="2026-09-20">20 de septiembre de 2026</time>.</p>
+        <p>Un equipo detenido no cuesta solo lo que cobra quien lo repara. Cuesta los días en que el negocio no puede vender, producir o entregar lo prometido. Esta guía ordena ese costo en seis preguntas y lo compara con lo que cuesta revisar el equipo antes de que falle. Todas las cifras son hipotéticas, están expresadas en base 100 o en días y sirven para seguir el razonamiento, no como un resultado esperable.</p>
+      </header>
+
+      <section class="apartado" id="p1" aria-labelledby="p1-titulo">
+        <h3 id="p1-titulo">¿Qué cuesta realmente una parada?</h3>
+        <p>La factura de la reparación es la parte visible. Detrás suele haber al menos cuatro componentes: el ingreso que no entra mientras el equipo está detenido, el producto o el material que se pierde, las horas del personal que espera sin poder trabajar y los gastos de última hora, como traslados o compras de reemplazo.</p>
+        <p>Para sumarlos hace falta una unidad común. En esta guía, el ingreso de un día normal de operación equivale a 100. Si un equipo detiene la venta durante tres días, el ingreso no generado es de 300, aunque la reparación haya costado 80. En ese ejemplo hipotético, la reparación es menos de una cuarta parte del costo total.</p>
+        <figure class="motivo">
+          <svg class="grafico grafico--reducido" viewBox="0 0 360 205" role="img" aria-labelledby="curva-r-titulo curva-r-desc">
+            <title id="curva-r-titulo">Curva de la bañera, versión reducida</title>
+            <desc id="curva-r-desc">Versión simplificada de la curva de la bañera: tasa de fallas alta en las fallas tempranas, baja durante la vida útil y creciente en el desgaste, con el mantenimiento preventivo marcado antes del desgaste.</desc>
+            <g class="m-rejilla">
+              <line x1="110" y1="20" x2="110" y2="150"/>
+              <line x1="250" y1="20" x2="250" y2="150"/>
+            </g>
+            <rect class="m-falla" x="30" y="158" width="80" height="10"/>
+            <rect class="m-vida" x="110" y="158" width="140" height="10"/>
+            <rect class="m-falla" x="250" y="158" width="92" height="10"/>
+            <path class="m-eje" d="M30 16 V150 H348"/>
+            <path class="m-flecha" d="M26 22 L30 14 L34 22 Z M342 146 L350 150 L342 154 Z"/>
+            <path class="m-curva" d="M36 26 C 54 100 76 128 110 130 L 250 130 C 286 130 316 108 338 30"/>
+            <line class="m-preventivo" x1="232" y1="24" x2="232" y2="150"/>
+            <text class="m-texto" x="226" y="40" text-anchor="end" font-size="16">Preventivo</text>
+            <text class="m-texto" x="70" y="192" text-anchor="middle" font-size="15">Tempranas</text>
+            <text class="m-texto" x="180" y="192" text-anchor="middle" font-size="15">Vida útil</text>
+            <text class="m-texto" x="296" y="192" text-anchor="middle" font-size="15">Desgaste</text>
+          </svg>
+          <figcaption>Versión reducida de la curva de la bañera: el mantenimiento preventivo se sitúa dentro de la vida útil, antes de la zona de desgaste.</figcaption>
+        </figure>
+        <p>El momento de la falla también importa, porque la tasa de fallas de un equipo no es constante. Suele ser alta al comienzo, cuando aparecen defectos de instalación o de fabricación; baja y se mantiene estable durante la vida útil; y vuelve a subir cuando el desgaste se acumula. El mantenimiento preventivo se ubica antes de ese último tramo.</p>
+      </section>
+
+      <section class="apartado" id="p2" aria-labelledby="p2-titulo">
+        <h3 id="p2-titulo">¿Qué equipos conviene registrar primero?</h3>
+        <p>No todos los equipos pesan igual. El primer criterio es cuánto depende la operación de cada uno: si un equipo se detiene y el negocio sigue funcionando, su parada cuesta poco; si la venta o la producción se interrumpe, su parada cuesta mucho.</p>
+        <p>Un orden práctico consiste en listar todos los equipos y anotar tres datos de cada uno: si su falla detiene la operación, si existe un reemplazo disponible y cuántos días tardaría en volver a funcionar. Los que detienen la operación, no tienen reemplazo y tardan más en recuperarse encabezan el inventario.</p>
+        <p>En un comercio de alimentos suele tratarse de la refrigeración; en una panadería, del horno; en un taller, de la máquina principal; en una oficina, de la computadora donde se factura. El orden final solo puede definirlo quien conoce el negocio.</p>
+      </section>
+
+      <section class="apartado" id="p3" aria-labelledby="p3-titulo">
+        <h3 id="p3-titulo">¿Qué datos debe tener la ficha de cada equipo?</h3>
+        <p>La ficha reúne en un solo lugar lo que hoy suele estar repartido entre facturas, manuales y la memoria del dueño. No requiere un programa especial: una hoja por equipo, en papel o en una planilla, alcanza para empezar. Esta es la lista de verificación mínima:</p>
+        <ul class="verificacion">
+          <li>Identificación interna del equipo y su ubicación en el local.</li>
+          <li>Fecha de compra o de instalación.</li>
+          <li>Uso diario aproximado, en horas.</li>
+          <li>Vida útil estimada según el manual del fabricante.</li>
+          <li>Frecuencia de revisión preventiva que indica el manual.</li>
+          <li>Datos del técnico autorizado que lo atiende.</li>
+          <li>Historial de fallas con fecha, días de parada y costo en base 100.</li>
+          <li>Fecha de la próxima revisión programada.</li>
+        </ul>
+        <p>Una ficha incompleta sigue siendo útil. Cada dato que se agrega mejora la estimación de la próxima parada y facilita la conversación con el técnico.</p>
+      </section>
+
+      <section class="apartado" id="p4" aria-labelledby="p4-titulo">
+        <h3 id="p4-titulo">¿Cómo se arma un calendario preventivo?</h3>
+        <p>El calendario parte de la frecuencia de revisión que indica el manual del fabricante y del uso real que el negocio da a cada equipo. Si un equipo trabaja muchas más horas que las previstas, el técnico autorizado puede recomendar revisiones más frecuentes; esa decisión le corresponde a él, no a esta guía.</p>
+        <p>Una forma sencilla de organizarlo es un cuadro de doce meses con una fila por equipo. En cada fila se marcan las revisiones programadas, procurando que no coincidan con los días de mayor movimiento ni entre sí. Así, si una revisión obliga a detener el equipo, esa parada es planificada y ocurre cuando menos afecta.</p>
+        <p>El calendario no reemplaza la observación diaria. Ruidos nuevos, temperaturas fuera de lo habitual o productos que salen distintos son señales que conviene anotar en la ficha y comunicar al técnico.</p>
+        <p class="advertencia"><strong>Advertencia.</strong> Toda intervención sobre un equipo debe realizarla un técnico autorizado, siguiendo el manual del fabricante y la normativa de seguridad vigente en Guatemala. Esta guía no contiene instrucciones técnicas y no debe usarse como tal.</p>
+      </section>
+
+      <section class="apartado" id="p5" aria-labelledby="p5-titulo">
+        <h3 id="p5-titulo">¿Cómo se compara el costo de mantener con el de una parada?</h3>
+        <p>La comparación se hace sobre un mismo período, por ejemplo un año, y con la misma unidad. De un lado se suma lo que costaría el programa preventivo; del otro, el costo esperado de las paradas si el equipo solo se atiende cuando falla. La tabla reúne las seis variables de control que alimentan esa comparación.</p>
+        <div class="tabla-marco" role="region" aria-labelledby="tabla-variables" tabindex="0">
+          <table>
+            <caption id="tabla-variables">Seis variables de control de un equipo de ejemplo. Valores hipotéticos: el ingreso de un día normal equivale a 100 y la vida útil estimada, también a 100.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Variable</th>
+                <th scope="col">Qué registra</th>
+                <th scope="col">Unidad</th>
+                <th scope="col" class="num">Valor del ejemplo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Días de parada por falla</th>
+                <td>Promedio de días sin operar en cada falla del historial</td>
+                <td>días</td>
+                <td class="num">3</td>
+              </tr>
+              <tr>
+                <th scope="row">Ingreso de un día normal</th>
+                <td>Lo que el negocio genera en un día sin paradas; es la referencia de la comparación</td>
+                <td>base 100</td>
+                <td class="num">100</td>
+              </tr>
+              <tr>
+                <th scope="row">Costo de la reparación correctiva</th>
+                <td>Promedio de lo pagado por cada intervención después de una falla</td>
+                <td>base 100</td>
+                <td class="num">80</td>
+              </tr>
+              <tr>
+                <th scope="row">Fallas por año</th>
+                <td>Número de fallas registradas en los últimos doce meses</td>
+                <td>fallas</td>
+                <td class="num">2</td>
+              </tr>
+              <tr>
+                <th scope="row">Costo anual del programa preventivo</th>
+                <td>Suma de las revisiones programadas para el año</td>
+                <td>base 100</td>
+                <td class="num">150</td>
+              </tr>
+              <tr>
+                <th scope="row">Uso acumulado frente a vida útil</th>
+                <td>Tiempo de uso del equipo dividido por su vida útil estimada</td>
+                <td>base 100</td>
+                <td class="num"><span class="marca-falla">Zona de desgaste</span>108</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Con esos valores, cada falla supone 300 de ingreso no generado y 80 de reparación: 380 en total. Con dos fallas al año, el costo esperado de las paradas es de 760, frente a 150 del programa preventivo. La sexta variable agrega contexto: un equipo que superó su vida útil estimada está en la zona de desgaste de la curva, donde las fallas tienden a hacerse más frecuentes.</p>
+        <p>La comparación no demuestra que las revisiones vayan a eliminar las fallas. Muestra cuánto pesa cada parada y permite discutir con datos si conviene programar revisiones y con qué frecuencia.</p>
+      </section>
+
+      <section class="apartado" id="p6" aria-labelledby="p6-titulo">
+        <h3 id="p6-titulo">¿Cuándo conviene programar el mantenimiento preventivo?</h3>
+        <p>El método no entrega una respuesta única, pero ordena la decisión. El mantenimiento preventivo tiende a justificarse cuando coinciden tres condiciones: la parada del equipo detiene la operación, el costo esperado de las paradas en el año supera con holgura el costo del programa y el equipo sigue dentro de su vida útil, donde una revisión puede detectar desgaste con tiempo.</p>
+        <p>Si el equipo ya está en la zona de desgaste, la pregunta cambia. Además de revisarlo, puede ser necesario evaluar con un técnico autorizado si conviene seguir operándolo o planificar su reemplazo. Esa decisión tiene también un tratamiento contable y tributario que conviene consultar con un contador público o profesional habilitado.</p>
+        <p>Si la parada no afecta la operación, porque existe un reemplazo o porque el equipo es secundario, atender las fallas a medida que ocurren puede ser razonable, siempre que cada una quede anotada en el historial.</p>
+      </section>
+
+      <section class="apartado" id="limitaciones" aria-labelledby="limitaciones-titulo">
+        <h3 id="limitaciones-titulo">Limitaciones del método</h3>
+        <ul class="limites-lista">
+          <li>Las cifras de esta guía son hipotéticas y solo ilustran el razonamiento; cada negocio debe usar sus propios registros.</li>
+          <li>El método supone que el historial de fallas anticipa el comportamiento futuro, algo que no siempre ocurre.</li>
+          <li>Con pocos meses de registros, las estimaciones son frágiles y conviene tratarlas como provisionales.</li>
+          <li>La base 100 simplifica la comparación, pero no reemplaza un análisis contable ni tributario.</li>
+          <li>El método no evalúa el estado técnico de ningún equipo: esa evaluación corresponde a un técnico autorizado.</li>
+        </ul>
+      </section>
+    </article>
+
+    <!-- Unidad publicitaria: este es un punto válido para insertar un bloque de anuncio, entre dos secciones completas (artículo y casos resueltos). No insertar anuncios dentro del glosario, de los casos resueltos ni de los documentos legales. -->
+
+    <section class="seccion pila" id="casos" aria-labelledby="casos-titulo">
+      <div class="cabeza">
+        <p class="etiqueta">Casos</p>
+        <h2 id="casos-titulo">Dos casos resueltos paso a paso</h2>
+      </div>
+      <p>Los dos casos aplican el método del artículo a situaciones inventadas. Todas las cifras son hipotéticas, en base 100 (100 es el ingreso de un día normal del negocio) o en días, y no representan resultados esperables.</p>
+
+      <article class="apartado caso" id="caso-1" aria-labelledby="caso-1-titulo">
+        <h3 id="caso-1-titulo">Caso 1: un comercio con un equipo de refrigeración</h3>
+        <p>Un minimercado de barrio vende lácteos, embutidos y bebidas frías desde una vitrina refrigerada. Es su único equipo de ese tipo.</p>
+        <ol class="pasos">
+          <li><strong>Identificar el equipo crítico.</strong> Si la vitrina se detiene, la venta de productos refrigerados se suspende y parte de la mercadería se descarta. No hay otro equipo que la reemplace, así que encabeza el inventario.</li>
+          <li><strong>Leer el historial.</strong> En los últimos doce meses hubo dos fallas, con 2 y 4 días de parada: un promedio de 3 días por falla.</li>
+          <li><strong>Estimar el costo de una parada.</strong> La vitrina sostiene 40 de cada 100 del ingreso diario. Tres días sin ella suman 120 de venta no realizada; el producto descartado se estima en 60 y la reparación, en 70. Costo por falla: 250.</li>
+          <li><strong>Proyectar el año.</strong> Si el ritmo del historial se repite, dos fallas suponen un costo esperado de 500.</li>
+          <li><strong>Estimar el programa preventivo.</strong> El calendario propuesto por el técnico autorizado reúne revisiones que suman 120 en el año, incluida la venta que se deja de hacer durante cada visita programada.</li>
+          <li><strong>Comparar.</strong> En el mismo año, 500 de paradas esperadas frente a 120 del programa preventivo.</li>
+        </ol>
+        <div class="caso-cierre">
+          <p><strong>Qué observa el método.</strong> Que, en este ejemplo hipotético, una sola parada cuesta más que todo el programa preventivo del año y que la mayor parte de ese costo no es la reparación, sino la venta y la mercadería perdidas.</p>
+          <p><strong>Qué no puede decidir.</strong> Si las revisiones reducirán las fallas, qué revisiones necesita la vitrina ni cada cuánto hacerlas. Eso lo determina un técnico autorizado con el manual del fabricante.</p>
+        </div>
+      </article>
+
+      <article class="apartado caso" id="caso-2" aria-labelledby="caso-2-titulo">
+        <h3 id="caso-2-titulo">Caso 2: un taller con una máquina de trabajo principal</h3>
+        <p>Un taller de confección cumple sus pedidos semanales con una máquina principal. Tiene equipos auxiliares, pero ninguno puede hacer el trabajo de esa máquina.</p>
+        <ol class="pasos">
+          <li><strong>Ubicar el equipo en la curva.</strong> El uso acumulado de la máquina equivale a 108 sobre una vida útil estimada de 100: está en la zona de desgaste.</li>
+          <li><strong>Leer el historial.</strong> Hubo tres fallas en los últimos doce meses, y el tiempo entre fallas pasó de 150 a 90 días.</li>
+          <li><strong>Estimar el costo de una parada.</strong> Cada falla detiene la producción 2 días, es decir, 200 de ingreso en riesgo. El taller recupera la mitad con horas adicionales, que cuestan 30, y la reparación cuesta 90. Costo por falla: 100 no recuperado, más 30, más 90, igual a 220.</li>
+          <li><strong>Proyectar el año.</strong> Con tres fallas, el costo esperado de las paradas es de 660. Si el tiempo entre fallas sigue acortándose, el número de fallas podría ser mayor.</li>
+          <li><strong>Estimar el programa preventivo.</strong> Las revisiones programadas que propone el técnico autorizado suman 180 en el año.</li>
+          <li><strong>Agregar una tercera opción.</strong> Como la máquina ya superó su vida útil estimada, la comparación incluye evaluar con el técnico autorizado si conviene seguir operándola o planificar su reemplazo, y consultar con un contador público el tratamiento contable de esa decisión.</li>
+        </ol>
+        <div class="caso-cierre">
+          <p><strong>Qué observa el método.</strong> Que el costo esperado de las paradas supera al del programa preventivo y que el acortamiento del tiempo entre fallas es coherente con la zona de desgaste de la curva.</p>
+          <p><strong>Qué no puede decidir.</strong> Si conviene reparar, revisar con más frecuencia o reemplazar la máquina, ni cómo registrar esa decisión en la contabilidad. Lo primero corresponde a un técnico autorizado; lo segundo, a un contador público o profesional habilitado.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="seccion pila" id="nosotros" aria-labelledby="nosotros-titulo">
+      <div class="cabeza">
+        <p class="etiqueta">Nosotros</p>
+        <h2 id="nosotros-titulo">Quién edita fongril y cómo se sostiene</h2>
+      </div>
+      <h3>Quién edita</h3>
+      <p>fongril es un portal de divulgación editado por ANDRES EDUARDO VERGARA CAMARGO desde la Ciudad de Guatemala. Su objetivo es explicar, con un lenguaje sencillo, cómo un negocio pequeño puede registrar sus equipos y medir lo que le cuesta cada parada.</p>
+      <h3>Cómo se elabora el contenido</h3>
+      <p>Cada texto parte de conceptos generales de gestión del mantenimiento y se redacta con ejemplos hipotéticos en base 100 o en días. Antes de publicarse se revisa para excluir instrucciones técnicas, nombres de marcas, fabricantes o proveedores y cualquier promesa de resultado. Cada artículo muestra su fecha de publicación y la de su última revisión.</p>
+      <h3>Corrección de errores</h3>
+      <p>Si encuentra un dato incorrecto o una explicación confusa, escriba a <a href="mailto:soporte@fongril.blog">soporte@fongril.blog</a> indicando la sección. Cada aviso se revisa dentro de los diez días hábiles siguientes; si corresponde, el texto se corrige y se actualiza su fecha de revisión.</p>
+      <h3>Cómo se financia el sitio</h3>
+      <p>El sitio se sostiene con publicidad de terceros administrada por Google. Los anunciantes no intervienen en la redacción, no pagan por menciones y no revisan los textos. Los anuncios se muestran separados del contenido editorial y no constituyen una recomendación.</p>
+      <h3>Límite de la actividad</h3>
+      <p>fongril no presta servicios técnicos, contables ni financieros, no vende productos, no recomienda técnicos ni proveedores y no atiende consultas sobre equipos o negocios particulares. Su actividad se limita a publicar contenido informativo.</p>
+      <h3>Ficha del titular</h3>
+      <dl class="ficha">
+        <div><dt>Nombre del sitio</dt><dd>fongril</dd></div>
+        <div><dt>Titular</dt><dd>ANDRES EDUARDO VERGARA CAMARGO</dd></div>
+        <div><dt>Dominio</dt><dd>fongril.blog</dd></div>
+        <div><dt>Correo de soporte</dt><dd><a href="mailto:soporte@fongril.blog">soporte@fongril.blog</a></dd></div>
+        <div><dt>Dirección comercial</dt><dd>La Terminal, Cdad. de Guatemala 01004, Guatemala</dd></div>
+        <div><dt>Teléfono</dt><dd><a href="tel:+50234284181">+50234284181</a></dd></div>
+        <div><dt>País y ley de datos aplicable</dt><dd>Guatemala: Constitución Política, artículos 24 y 31, y Ley de Acceso a la Información Pública, Decreto 57-2008</dd></div>
+      </dl>
+    </section>
+
+    <section class="seccion pila" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="cabeza">
+        <p class="etiqueta">Contacto</p>
+        <h2 id="contacto-titulo">Escribir a fongril</h2>
+      </div>
+      <p>Este canal sirve para comentarios sobre el contenido, avisos de errores y solicitudes sobre datos personales. No se responden consultas sobre equipos o negocios particulares.</p>
+      <h3>Datos de contacto</h3>
+      <ul class="datos-contacto">
+        <li><strong>Titular:</strong> ANDRES EDUARDO VERGARA CAMARGO</li>
+        <li><strong>Correo:</strong> <a href="mailto:soporte@fongril.blog">soporte@fongril.blog</a></li>
+        <li><strong>Teléfono:</strong> <a href="tel:+50234284181">+50234284181</a></li>
+        <li><strong>Dirección:</strong> La Terminal, Cdad. de Guatemala 01004, Guatemala</li>
+        <li><strong>Sitio:</strong> fongril.blog</li>
+        <li><strong>Plazo de respuesta:</strong> hasta diez días hábiles.</li>
+      </ul>
+      <h3>Formulario</h3>
+      <p class="antiphishing"><strong>Aviso contra fraudes.</strong> fongril nunca le pedirá datos bancarios, números de tarjeta, contraseñas, códigos de verificación ni pagos, por ningún medio. Si recibe un mensaje así en nombre de este sitio, no responda y avise a <a href="mailto:soporte@fongril.blog">soporte@fongril.blog</a>.</p>
+      <form class="formulario" id="formulario-contacto" action="mailto:soporte@fongril.blog" method="post" enctype="text/plain" autocomplete="off">
+        <p>Al pulsar el botón se abrirá su programa de correo con el mensaje preparado. Este sitio no almacena lo que escribe.</p>
+        <div class="campo">
+          <label for="campo-nombre">Nombre</label>
+          <input id="campo-nombre" name="nombre" type="text" required minlength="2" maxlength="80" aria-describedby="error-nombre">
+          <p class="error" id="error-nombre" hidden></p>
+        </div>
+        <div class="campo">
+          <label for="campo-correo">Correo electrónico</label>
+          <input id="campo-correo" name="correo" type="email" required maxlength="120" aria-describedby="error-correo">
+          <p class="error" id="error-correo" hidden></p>
+        </div>
+        <div class="campo">
+          <label for="campo-mensaje">Mensaje</label>
+          <textarea id="campo-mensaje" name="mensaje" required minlength="20" maxlength="2000" aria-describedby="error-mensaje"></textarea>
+          <p class="error" id="error-mensaje" hidden></p>
+        </div>
+        <div>
+          <button class="boton boton--primario" type="submit">Preparar el correo</button>
+        </div>
+        <p class="estado" id="formulario-estado" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="seccion pila" id="descargo" aria-labelledby="descargo-titulo">
+      <div class="cabeza">
+        <p class="etiqueta">Descargo</p>
+        <h2 id="descargo-titulo">Descargo de responsabilidad</h2>
+      </div>
+      <p>fongril.blog, operado por ANDRES EDUARDO VERGARA CAMARGO, es un portal puramente informativo. No presta intermediación financiera, captación de dinero, asesoría de inversión personalizada ni concesión de créditos. Tampoco repara equipos, recomienda técnicos o proveedores, vende repuestos, certifica instalaciones ni presta asesoría técnica, contable o tributaria individual.</p>
+      <p>Toda intervención sobre un equipo debe realizarla un técnico autorizado, siguiendo el manual del fabricante y la normativa de seguridad vigente en Guatemala. Para el tratamiento contable de equipos y reparaciones, consulte a un contador público o profesional habilitado.</p>
+      <p>Las cifras del sitio son hipotéticas y se expresan en base 100 o en días. No representan resultados alcanzables ni sustituyen el análisis de cada caso. El texto completo está en el <a href="#doc-descargo">Descargo de Responsabilidad</a> de los documentos legales.</p>
+    </section>
+
+    <section class="seccion pila" id="politicas" aria-labelledby="politicas-titulo">
+      <div class="cabeza">
+        <p class="etiqueta">Legales</p>
+        <h2 id="politicas-titulo">Documentos legales</h2>
+      </div>
+      <p>Los cuatro documentos tienen la misma fecha de última actualización: 20 de septiembre de 2026. Pulse el título de cada uno para desplegarlo.</p>
+      <div class="legales">
+
+        <details class="doc" id="doc-privacidad">
+          <summary><h3>Política de Privacidad</h3></summary>
+          <div class="doc-cuerpo pila">
+            <p class="actualizacion">Última actualización: 20 de septiembre de 2026.</p>
+            <h4>1. Marco normativo</h4>
+            <p>A la fecha de esta política, Guatemala no cuenta con una ley general de protección de datos personales en vigor, y existen iniciativas sobre la materia en estudio en el Congreso de la República. Esta política se rige por la Constitución Política de la República de Guatemala, en particular sus artículos 24 (inviolabilidad de correspondencia, documentos y libros) y 31 (acceso a archivos y registros estatales), y toma como referencia la Ley de Acceso a la Información Pública, Decreto número 57-2008 del Congreso de la República, que define los datos personales y los datos sensibles y regula el hábeas data. El responsable aplica además, de forma voluntaria, los principios de licitud, finalidad, proporcionalidad, calidad y seguridad, y reconoce los derechos de acceso, rectificación, cancelación y oposición. Si se aprueba una ley general, esta política se adaptará a ella.</p>
+            <h4>2. Responsable del tratamiento</h4>
+            <p>El responsable es ANDRES EDUARDO VERGARA CAMARGO, titular de fongril (fongril.blog), con domicilio en La Terminal, Cdad. de Guatemala 01004, Guatemala. Correo: <a href="mailto:soporte@fongril.blog">soporte@fongril.blog</a>. Teléfono: <a href="tel:+50234284181">+50234284181</a>.</p>
+            <h4>3. Datos que se recogen</h4>
+            <ul class="limites-lista">
+              <li>Datos que usted envía por correo electrónico: nombre, dirección de correo y el contenido de su mensaje. El formulario del sitio no los guarda; solo prepara un mensaje en su propio programa de correo.</li>
+              <li>Datos técnicos de navegación recogidos por terceros mediante cookies, solo si usted las acepta: dirección IP, tipo de navegador y de dispositivo, páginas visitadas e interacción con los anuncios.</li>
+              <li>Su elección sobre cookies, que se guarda en su propio navegador y no se envía al sitio.</li>
+            </ul>
+            <p>El sitio no solicita datos sensibles, bancarios ni de identificación oficial.</p>
+            <h4>4. Finalidad y base del tratamiento</h4>
+            <p>Los datos enviados por correo se usan únicamente para responder su mensaje, atender avisos de errores y gestionar solicitudes sobre datos personales; la base del tratamiento es su consentimiento, expresado al escribir. Los datos de navegación se usan para mostrar publicidad y medir el uso del sitio; la base es el consentimiento que usted otorga en el aviso de cookies y que puede retirar en cualquier momento. Los datos no se venden ni se usan para elaborar perfiles propios.</p>
+            <h4>5. Plazo de conservación</h4>
+            <p>Los correos se conservan hasta doce meses después de la última comunicación y luego se eliminan, salvo que una obligación legal exija conservarlos por más tiempo. Su elección sobre cookies permanece en su navegador hasta que usted la borre. Las cookies de terceros se conservan durante los plazos que fija cada proveedor.</p>
+            <h4>6. Terceros que intervienen</h4>
+            <p>Intervienen el proveedor del servicio de correo electrónico del sitio y el proveedor de alojamiento web, que tratan datos por cuenta del responsable y solo para prestar su servicio, y Google, que actúa como proveedor externo de publicidad y medición conforme a su propia política de privacidad. No se comparten datos con otros terceros, salvo requerimiento de una autoridad competente.</p>
+            <h4>7. Transferencias fuera del país</h4>
+            <p>Los proveedores mencionados pueden almacenar o procesar datos en servidores ubicados fuera de Guatemala, por ejemplo en los Estados Unidos de América. Esas transferencias se realizan conforme a las condiciones y medidas de seguridad de cada proveedor. Al escribir al sitio o aceptar las cookies, usted consiente esas transferencias.</p>
+            <h4>8. Derechos de acceso, rectificación, cancelación y oposición</h4>
+            <p>Usted puede solicitar el acceso a sus datos, su rectificación o su cancelación, y oponerse a su tratamiento. Para hacerlo, escriba a <a href="mailto:soporte@fongril.blog">soporte@fongril.blog</a> con el asunto «Derechos sobre datos personales» e indique su nombre, el derecho que ejerce y los datos a los que se refiere. Si hace falta confirmar su identidad, se le pedirá únicamente información que ya conste en la comunicación previa, nunca datos bancarios ni contraseñas. La respuesta se envía en un plazo máximo de diez días hábiles desde la recepción de la solicitud. Sobre los datos que trata Google, puede ejercer sus derechos directamente ante esa empresa.</p>
+            <h4>9. Menores de edad</h4>
+            <p>El sitio no se dirige a menores de dieciocho años y no recoge conscientemente sus datos. Si se detecta que un menor envió información, esta se elimina sin conservar copia.</p>
+            <h4>10. Medidas de seguridad</h4>
+            <p>El sitio se sirve mediante conexión cifrada (HTTPS). El acceso al buzón de correo está restringido al responsable y protegido con autenticación reforzada. El formulario no almacena información en ningún servidor. Ninguna medida elimina todo riesgo, por lo que se recomienda no enviar información que no sea necesaria.</p>
+            <h4>11. Cambios en esta política</h4>
+            <p>Cualquier cambio se publica en esta página con una nueva fecha de última actualización. Si el cambio es sustancial, se indica además con un aviso visible en la portada durante treinta días.</p>
+          </div>
+        </details>
+
+        <details class="doc" id="doc-terminos">
+          <summary><h3>Términos y Condiciones</h3></summary>
+          <div class="doc-cuerpo pila">
+            <p class="actualizacion">Última actualización: 20 de septiembre de 2026.</p>
+            <h4>1. Identificación del titular</h4>
+            <p>El sitio fongril, disponible en fongril.blog, es operado por ANDRES EDUARDO VERGARA CAMARGO, con domicilio en La Terminal, Cdad. de Guatemala 01004, Guatemala, correo <a href="mailto:soporte@fongril.blog">soporte@fongril.blog</a> y teléfono <a href="tel:+50234284181">+50234284181</a>.</p>
+            <h4>2. Objeto del sitio</h4>
+            <p>fongril publica contenido informativo sobre la organización del mantenimiento de los equipos de un negocio pequeño y el costo de sus paradas. No ofrece servicios técnicos, contables, tributarios ni financieros, ni vende productos.</p>
+            <h4>3. Gratuidad</h4>
+            <p>El acceso y la consulta del contenido son gratuitos y no requieren registro. El sitio no cobra por ningún concepto ni solicita pagos por ningún medio.</p>
+            <h4>4. Usos permitidos</h4>
+            <p>Usted puede leer el contenido, imprimirlo o guardarlo para uso personal o interno de su negocio, y citar fragmentos breves indicando la fuente y el enlace.</p>
+            <h4>5. Usos prohibidos</h4>
+            <ul class="limites-lista">
+              <li>Reproducir o distribuir el contenido completo, con fines comerciales o sin citar la fuente.</li>
+              <li>Presentar el contenido como asesoría técnica, contable o tributaria, o usarlo como guía para intervenir equipos.</li>
+              <li>Intentar acceder sin autorización a los sistemas del sitio, alterar su funcionamiento o introducir código malicioso.</li>
+              <li>Usar el nombre de fongril o de su titular para solicitar datos o pagos a terceros.</li>
+            </ul>
+            <h4>6. Propiedad intelectual</h4>
+            <p>Los textos, gráficos y el diseño del sitio pertenecen a su titular y están protegidos por la Ley de Derecho de Autor y Derechos Conexos, Decreto número 33-98 del Congreso de la República, y por los tratados internacionales aplicables. Las marcas y contenidos de terceros que aparezcan en los anuncios pertenecen a sus respectivos dueños.</p>
+            <h4>7. Enlaces externos</h4>
+            <p>El sitio incluye enlaces a páginas de terceros, como las de Google sobre publicidad. fongril no controla esas páginas y no responde por su contenido ni por sus políticas.</p>
+            <h4>8. Publicidad</h4>
+            <p>El sitio muestra anuncios de terceros administrados por Google. Los anuncios no son recomendaciones de fongril, que no verifica los productos ni los servicios anunciados. Cualquier relación con un anunciante es ajena al sitio.</p>
+            <h4>9. Limitación de responsabilidad</h4>
+            <p>El contenido se ofrece con fines informativos y puede contener errores u omisiones. Las decisiones que usted tome sobre sus equipos o su negocio son de su exclusiva responsabilidad y deben apoyarse en un técnico autorizado y, cuando corresponda, en un contador público o profesional habilitado. fongril no responde por daños derivados del uso del contenido, por interrupciones del sitio ni por el contenido de los anuncios.</p>
+            <h4>10. Modificaciones</h4>
+            <p>Estos términos pueden modificarse en cualquier momento. La versión vigente es la publicada en esta página, con su fecha de última actualización.</p>
+            <h4>11. Legislación aplicable</h4>
+            <p>Estos términos se rigen por las leyes de la República de Guatemala. Cualquier controversia se someterá a los tribunales competentes de la Ciudad de Guatemala, sin perjuicio de los derechos que la ley reconozca a los usuarios.</p>
+          </div>
+        </details>
+
+        <details class="doc" id="doc-cookies">
+          <summary><h3>Política de Cookies</h3></summary>
+          <div class="doc-cuerpo pila">
+            <p class="actualizacion">Última actualización: 20 de septiembre de 2026.</p>
+            <h4>1. Qué son las cookies</h4>
+            <p>Las cookies son pequeños archivos que un sitio guarda en su navegador para recordar información entre visitas. Este sitio usa además el almacenamiento local del navegador, una tecnología similar, para recordar su elección sobre cookies.</p>
+            <h4>2. Cookies técnicas</h4>
+            <p>Son necesarias para el funcionamiento del sitio. fongril solo guarda en el almacenamiento local de su navegador si usted aceptó o rechazó las cookies, para no volver a preguntarle en cada visita. Ese dato no se envía a ningún servidor.</p>
+            <h4>3. Cookies de medición</h4>
+            <p>Permiten conocer de forma agregada cuántas personas visitan el sitio y qué secciones consultan. Solo se activan si usted acepta las cookies y las instala el proveedor de la herramienta de medición, que puede ser Google.</p>
+            <h4>4. Cookies publicitarias de terceros</h4>
+            <p>Google, como proveedor externo, utiliza cookies para mostrar anuncios en este sitio. La publicidad de Google puede usar cookies para mostrar anuncios basados en las visitas previas de un usuario a este sitio o a otros sitios de internet. Puede leer cómo usa Google la información de los sitios que utilizan sus servicios en <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a> y desactivar la publicidad personalizada en <a href="https://adssettings.google.com">adssettings.google.com</a>.</p>
+            <h4>5. Cómo revocar el consentimiento</h4>
+            <p>Puede cambiar su elección en cualquier momento con el botón de este apartado o desde su navegador: abra la configuración, busque el apartado de privacidad, cookies o datos de sitios, y elimine los datos guardados para fongril.blog. En ese mismo apartado puede bloquear las cookies de terceros. Al borrar los datos del sitio, el aviso de cookies volverá a aparecer en su próxima visita.</p>
+            <p><button class="boton boton--secundario" id="cambiar-cookies" type="button" hidden>Cambiar mi elección sobre cookies</button></p>
+            <h4>6. Cambios</h4>
+            <p>Esta política puede actualizarse cuando cambien las herramientas del sitio. La fecha de última actualización indica la versión vigente.</p>
+          </div>
+        </details>
+
+        <details class="doc" id="doc-descargo">
+          <summary><h3>Descargo de Responsabilidad</h3></summary>
+          <div class="doc-cuerpo pila">
+            <p class="actualizacion">Última actualización: 20 de septiembre de 2026.</p>
+            <h4>1. Naturaleza del sitio</h4>
+            <p>fongril.blog, operado por ANDRES EDUARDO VERGARA CAMARGO, es un portal puramente informativo. No presta intermediación financiera, captación de dinero, asesoría de inversión personalizada ni concesión de créditos. Tampoco repara equipos, recomienda técnicos o proveedores, vende repuestos, certifica instalaciones ni presta asesoría técnica, contable o tributaria individual.</p>
+            <h4>2. Intervención sobre equipos</h4>
+            <p>El contenido no incluye instrucciones técnicas. Toda intervención sobre un equipo debe realizarla un técnico autorizado, siguiendo el manual del fabricante y la normativa de seguridad vigente en Guatemala.</p>
+            <h4>3. Aspectos contables y tributarios</h4>
+            <p>El tratamiento contable y tributario de equipos, reparaciones y reemplazos debe consultarse con un contador público o profesional habilitado.</p>
+            <h4>4. Cifras y ejemplos</h4>
+            <p>Todas las cifras son hipotéticas, se expresan en base 100 o en días y solo ilustran un razonamiento. No representan resultados alcanzables, no aseguran ningún efecto sobre los equipos ni sobre el negocio y no sustituyen el análisis de cada caso.</p>
+            <h4>5. Responsabilidad</h4>
+            <p>Quien usa el contenido lo hace bajo su propia responsabilidad. fongril no responde por decisiones tomadas a partir de él, por errores u omisiones que pueda contener ni por el contenido de sitios externos o de anuncios de terceros.</p>
+            <h4>6. Solicitudes fraudulentas</h4>
+            <p>fongril nunca solicita datos bancarios, contraseñas, códigos de verificación ni pagos. Cualquier mensaje que lo haga en nombre del sitio es fraudulento y puede reportarse a <a href="mailto:soporte@fongril.blog">soporte@fongril.blog</a>.</p>
+          </div>
+        </details>
+
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer class="pie">
+  <div class="pie-interior">
+    <section class="pila" aria-labelledby="pie-titular">
+      <h2 id="pie-titular">Datos del titular</h2>
+      <dl class="pie-datos">
+        <div><dt>Nombre del sitio</dt><dd>fongril</dd></div>
+        <div><dt>Titular</dt><dd>ANDRES EDUARDO VERGARA CAMARGO</dd></div>
+        <div><dt>Dominio</dt><dd>fongril.blog</dd></div>
+        <div><dt>Correo de soporte</dt><dd><a href="mailto:soporte@fongril.blog">soporte@fongril.blog</a></dd></div>
+        <div><dt>Dirección comercial</dt><dd>La Terminal, Cdad. de Guatemala 01004, Guatemala</dd></div>
+        <div><dt>Teléfono</dt><dd><a href="tel:+50234284181">+50234284181</a></dd></div>
+        <div><dt>País y ley de datos aplicable</dt><dd>Guatemala: Constitución Política, artículos 24 y 31, y Ley de Acceso a la Información Pública, Decreto 57-2008</dd></div>
+      </dl>
+    </section>
+    <nav class="pila" aria-labelledby="pie-legales">
+      <h2 id="pie-legales">Enlaces legales</h2>
+      <ul class="pie-legales">
+        <li><a href="#doc-privacidad">Política de Privacidad</a></li>
+        <li><a href="#doc-terminos">Términos y Condiciones</a></li>
+        <li><a href="#doc-cookies">Política de Cookies</a></li>
+        <li><a href="#doc-descargo">Descargo de Responsabilidad</a></li>
+      </ul>
+    </nav>
+    <p class="pie-nota">© 2026 fongril. Portal informativo sobre mantenimiento de equipos en negocios pequeños. No presta asesoría individual ni vende productos o servicios.</p>
+  </div>
+</footer>
+
+<div class="cookies" id="aviso-cookies" role="region" aria-label="Aviso de cookies" hidden>
+  <div class="cookies-interior">
+    <p class="cookies-texto">Este sitio guarda su elección en su navegador y, solo si usted acepta, permite cookies de medición y publicitarias de Google. Puede cambiar su elección cuando quiera. <a href="#doc-cookies">Leer la Política de Cookies</a></p>
+    <div class="cookies-botones">
+      <button class="boton boton--primario" id="cookies-aceptar" type="button">Aceptar cookies</button>
+      <button class="boton boton--secundario" id="cookies-rechazar" type="button">Rechazar cookies</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>
